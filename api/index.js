@@ -13,7 +13,7 @@ mongoose
   .connect(process.env.MONGO_DB, {
     // useNewUrlParser: true,
     // useUnifiedTopology: true,
-    // useCreateIndex: true,
+    //useCreateIndex: true,
   })
   .then(console.log("Connected to MONGODB"))
   .catch((err) => {
