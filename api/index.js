@@ -6,9 +6,13 @@ const app = express();
 
 const dotenv = require("dotenv");
 const mongoose = require("mongoose");
+const authRoute = require("./routes/auth");
 
 // Configuration for env file
 dotenv.config();
+
+// This let us to send json object inside body
+app.use(express.json());
 mongoose
   .connect(process.env.MONGO_DB, {
     // useNewUrlParser: true,
@@ -20,11 +24,9 @@ mongoose
     console.log(err);
   });
 
-// try in web browser
-app.use("/", (req, res) => {});
+app.use("/api/auth", authRoute);
 
 // To use that we should listen to any port
-
 app.listen("5050", () => {
   console.log("backend is running");
 });
