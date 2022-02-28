@@ -27,6 +27,6 @@ mongoose
 app.use("/api/auth", authRoute);
 
 // To use that we should listen to any port
-app.listen("5050", () => {
+app.listen("5000", () => {
   console.log("backend is running");
 });
