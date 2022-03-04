@@ -5,6 +5,9 @@ import Write from "./pages/write/Write";
 import Settings from "./pages/settings/Settings";
 import Login from "./pages/login/Login";
 import Register from "./pages/register/Register";
+import { useContext } from "react";
+import { Context } from "./context/Context";
+
 import {
   BrowserRouter as Router,
   Switch,
@@ -13,7 +16,7 @@ import {
 } from "react-router-dom";
 
 function App() {
-  const user = false; //we dont any user yet
+  const { user } = useContext(Context); //we dont any user yet
   return (
     <Router>
     <TopBar/>
