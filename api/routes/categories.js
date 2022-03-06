@@ -1,7 +1,6 @@
 // To create router we can use express
 const router = require("express").Router();
 const Category = require("../models/Category");
-
 // Create category
 router.post("/", async (req, res) => {
   const newCat = new Category(req.body);
@@ -12,7 +11,6 @@ router.post("/", async (req, res) => {
     res.status(500).json(err);
   }
 });
-
 // Fetch all categories
 router.get("/", async (req, res) => {
   try {

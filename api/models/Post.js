@@ -1,7 +1,5 @@
-// import mongoose
 const mongoose = require("mongoose");
-
-// Create User Schema
+// Create Post Schema
 const PostSchema = new mongoose.Schema(
   {
     title: {

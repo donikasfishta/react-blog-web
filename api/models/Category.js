@@ -1,6 +1,5 @@
 // import mongoose
 const mongoose = require("mongoose");
-
 // Create User Schema
 const CategorySchema = new mongoose.Schema(
   {
@@ -8,8 +7,8 @@ const CategorySchema = new mongoose.Schema(
       type: String,
       required: true,
     },
+    //   this creates the date
   },
-  //   this creates the date
   { timestamps: true }
 );
 

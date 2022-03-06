@@ -1,13 +1,11 @@
 // To create router we can use express
 const router = require("express").Router();
-
 const User = require("../models/User");
 const Post = require("../models/Post");
 
 // Create new post
 // If we are creating something post method
 // We use async because we have to wait from database return of response
-
 router.post("/", async (req, res) => {
   const newPost = new Post(req.body);
   try {
@@ -17,7 +15,9 @@ router.post("/", async (req, res) => {
     res.status(500).json(err);
   }
 });
-// Update Post
+
+// Update post
+
 router.put("/:id", async (req, res) => {
   try {
     const post = await Post.findById(req.params.id);
@@ -37,14 +37,14 @@ router.put("/:id", async (req, res) => {
         res.status(500).json(err);
       }
     } else {
-      res.status(404).json("You can update only your post!");
+      res.status(401).json("You can update only your post!");
     }
   } catch (err) {
     res.status(500).json(err);
   }
 });
-// Delete Posst
 
+// Delete post
 router.delete("/:id", async (req, res) => {
   try {
     const post = await Post.findById(req.params.id);
@@ -57,18 +57,17 @@ router.delete("/:id", async (req, res) => {
         res.status(500).json(err);
       }
     } else {
-      res.status(404).json("You can delete only your post!");
+      res.status(401).json("You can delete only your post!");
     }
   } catch (err) {
     res.status(500).json(err);
   }
 });
 
-//Get Post
+// Get Post
 router.get("/:id", async (req, res) => {
   try {
     const post = await Post.findById(req.params.id);
-
     res.status(200).json(post);
   } catch (err) {
     res.status(500).json(err);
@@ -83,7 +82,7 @@ router.get("/", async (req, res) => {
   try {
     let posts;
     if (username) {
-      posts = await Post.find({ username: username });
+      posts = await Post.find({ username });
     } else if (catName) {
       posts = await Post.find({
         categories: {

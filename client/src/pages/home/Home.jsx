@@ -1,35 +1,30 @@
-import { useEffect, useState } from "react";
-import Header from "../../components/header/Header";
-import Posts from "../../components/posts/Posts";
-import Sidebar from "../../components/sidebar/Sidebar";
-import "./home.css";
 import axios from "axios";
-import { useLocation } from "react-router-dom";
+import { useEffect, useState } from "react";
+import Header from "../../Components/Header/Header";
+import Posts from "../../Components/Posts/Posts";
+import Sidebar from "../../Components/Sidebar/Sidebar";
+import "./Home.css";
+import { useLocation} from "react-router-dom"
 
 export default function Home() {
-  //Empty array because we havent fetch any data yet
-  const [posts, setPosts] = useState([]);
-  const {search} = useLocation();
-
-  
-
-  // fetch data
+  const [posts, setPosts] = useState([])
+  const {search} = useLocation()
   useEffect(() => {
-    const fetchPosts = async () => {
-      // we cahnge proxy to get data from backend in package.json
-      const res = await axios.get("/posts"+ search);
-      setPosts(res.data);
-    };
-    fetchPosts();
-  }, [search]);
+    const fetchPosts = async ()=>{
+      const res = await axios.get("/posts" + search)
+      setPosts(res.data)
+    }
+    fetchPosts()
+  },[search])
 
   return (
     <>
-      <Header />
-      <div className="home">
-        <Posts posts={posts} />
-        <Sidebar />
-      </div>
+    <Header />
+    <div className="home">
+      <Posts posts = {posts}/>
+      <Sidebar/>
+     
+    </div>
     </>
   );
 }

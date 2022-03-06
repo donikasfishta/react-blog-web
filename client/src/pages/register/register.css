@@ -1,51 +1,59 @@
-.register{
-    height: calc(100vh - 50px);
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center;
-    background: linear-gradient(
-        rgba(255,255,255,0.5),
-        rgba(255,255,255,0.5)
-
+.register {
+  height: calc(100vh - 50px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(
+      rgba(255, 255, 255, 0.5),
+      rgba(255, 255, 255, 0.5)
     ),
-    url("https://c0.wallpaperflare.com/preview/726/429/238/writing-blogging-blog-paperclip.jpg");
-    background-size: cover;
+    url(https://www.ambius.com/blog/wp-content/uploads/2018/06/top-10-desk-plants-blog.jpg);
+  background-size: cover;
 }
-.registerTitle{
-    font-size: 50px;
-}
-.registerForm{
-    margin-top: 20px;
-    display: flex;
-    flex-direction: column;
-}
-.registerForm > label{
-    margin: 10px 0;
 
+.registerTitle {
+  font-size: 50px;
 }
-.registerInput{
-    padding: 10px;
-    background-color: white;
-    border: none;
+.registerForm {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
 }
-.registerButton{
-    margin-top: 20px;
-    cursor: pointer;
-    background-color: teal;
-    border: none;
-    color: white;
-    border-radius: 10px;
-    padding: 10px;
+
+.registerForm label {
+  margin: 10px 0;
 }
-.registerLoginButton{
-    position: absolute;
-    top: 60px;
-    right: 20px;
-    background-color: lightcoral;
-    cursor: pointer;
-    border: none;
-    padding: 10px;
-    color: white;
-    border-radius: 10px;
+
+.registerInput {
+  padding: 10px;
+  background-color: #fff;
+  border: none;
+}
+
+.registerButton {
+  margin-top: 20px;
+  cursor: pointer;
+  background-color: teal;
+  border: none;
+  color: #fff;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.registerLoginButton {
+  position: absolute;
+  top: 60px;
+  right: 20px;
+  background-color: lightcoral;
+  cursor: pointer;
+  border: none;
+  padding: 10px;
+  color: #fff;
+  border-radius: 10px;
+}
+
+.error-span{
+  background-color: red;
+  
 }
