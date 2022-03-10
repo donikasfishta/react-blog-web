@@ -23,6 +23,9 @@ const PostSchema = new mongoose.Schema(
       type: Array,
       required: false,
     },
+    views: {
+      count: Number,
+    },
   },
   //   this creates the date
   { timestamps: true }

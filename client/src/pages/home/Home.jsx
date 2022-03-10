@@ -4,27 +4,40 @@ import Header from "../../Components/Header/Header";
 import Posts from "../../Components/Posts/Posts";
 import Sidebar from "../../Components/Sidebar/Sidebar";
 import "./Home.css";
-import { useLocation} from "react-router-dom"
 
 export default function Home() {
-  const [posts, setPosts] = useState([])
-  const {search} = useLocation()
+  const [posts, setPosts] = useState([]);
+  const [search, setSearch] = useState("");
+
   useEffect(() => {
-    const fetchPosts = async ()=>{
-      const res = await axios.get("/posts" + search)
-      setPosts(res.data)
-    }
-    fetchPosts()
-  },[search])
+    const fetchPosts = async () => {
+      const res = await axios.get("/posts/?q=" + search);
+      setPosts(res.data);
+    };
+    fetchPosts();
+  }, [search]);
 
   return (
     <>
-    <Header />
-    <div className="home">
-      <Posts posts = {posts}/>
-      <Sidebar/>
-     
-    </div>
+      <Header />
+      {/* <button className="btn"> */}
+      {/* <form> */}
+      <div className="btn">
+        <i className="navSearchIcon fas fa-search"></i>
+
+        <input
+          type="text"
+          className="input "
+          placeholder="Search..."
+          onChange={(e) => setSearch(e.target.value)}
+        />
+      </div>
+      {/* </form> */}
+      {/* </button> */}
+      <div className="home">
+        <Posts posts={posts} />
+        <Sidebar />
+      </div>
     </>
   );
 }

@@ -79,16 +79,16 @@ router.get("/", async (req, res) => {
   // This wil catch the url based on username and category name
   const username = req.query.user;
   const catName = req.query.cat;
+  const searchKey = req.query.q;
   try {
     let posts;
-    if (username) {
-      posts = await Post.find({ username });
-    } else if (catName) {
+    if (searchKey) {
       posts = await Post.find({
-        categories: {
-          // This will find only categories that are in array
-          $in: [catName],
-        },
+        $or: [
+          { username: new RegExp(searchKey, "i") },
+          { title: new RegExp(searchKey, "i") },
+          { desc: new RegExp(searchKey, "i") },
+        ],
       });
     } else {
       posts = await Post.find();

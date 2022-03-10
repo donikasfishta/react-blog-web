@@ -1,14 +1,6 @@
 .post {
   width: 385px;
   margin: 0px 25px 40px 25px;
-  box-shadow: 7px 4px 62px -9px rgba(0, 0, 0, 0.3);
-  border: 1px solid rgba(0, 0, 0, 0.19);
-  border-radius: 5px;
-  transition: transform 0.3s ease-in;
-}
-
-.post:hover {
-  transform: translateY(-5px);
 }
 
 .postImg {
