@@ -41,7 +41,7 @@ export default function SinglePost() {
         title,
         desc,
       });
-      setUpdateMode(false)
+      setUpdateMode(false);
     } catch (err) {}
   };
 
@@ -83,6 +83,7 @@ export default function SinglePost() {
               <b> {post.username}</b>
             </Link>
           </span>
+          <span className="singlePostView">Views: {post.views}</span>
           <span className="singlePostDate">
             {new Date(post.createdAt).toDateString()}
           </span>

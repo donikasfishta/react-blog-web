@@ -24,7 +24,8 @@ const PostSchema = new mongoose.Schema(
       required: false,
     },
     views: {
-      count: Number,
+        type: Number,
+        required: true
     },
   },
   //   this creates the date

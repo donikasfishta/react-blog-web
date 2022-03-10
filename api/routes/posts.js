@@ -9,6 +9,9 @@ const Post = require("../models/Post");
 router.post("/", async (req, res) => {
   const newPost = new Post(req.body);
   try {
+    let counter = 0;
+    newPost.views = counter;
+
     const savedPost = await newPost.save();
     res.status(200).json(savedPost);
   } catch (err) {
@@ -68,6 +71,12 @@ router.delete("/:id", async (req, res) => {
 router.get("/:id", async (req, res) => {
   try {
     const post = await Post.findById(req.params.id);
+    // Counting views of Post
+    if (post.views !== null) {
+      counter = post.views += 1;
+    }
+    post.views = counter;
+    await post.save();
     res.status(200).json(post);
   } catch (err) {
     res.status(500).json(err);
