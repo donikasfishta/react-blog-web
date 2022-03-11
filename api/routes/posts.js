@@ -82,6 +82,38 @@ router.get("/:id", async (req, res) => {
     res.status(500).json(err);
   }
 });
+// Comment to a Post
+router.post("/comment/:id", async (req, res) => {
+  try {
+    const post = await Post.findById(req.params.id);
+    const userComment = req.body.userComment;
+    const textComment = req.body.textComment;
+
+    if (userComment && textComment) {
+      post.comments.push({
+        userComment: userComment,
+        textComment: textComment,
+      });
+    } else if (!userComment || !textComment) {
+      console.log("Add all required datas.");
+    }
+    await post.save();
+    res.status(200).json(post.comments);
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
+// Getting all Comments
+// router.get("/comment/:id", async (req, res) => {
+//   try {
+//     const post = await Post.findById(req.params.id);
+
+//     res.status(200).json(post);
+//   } catch (err) {
+//     res.status(500).json(err);
+//   }
+// });
 
 //Get ALL Posts, this will help to fetch all te data to client
 router.get("/", async (req, res) => {

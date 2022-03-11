@@ -1,0 +1,52 @@
+.comPart {
+  width: 65%;
+  margin: 45px auto;
+
+  background-color: #fff;
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+  border-radius: 8px;
+  padding: 32px 32px 48px 32px;
+  margin-bottom: 32px;
+}
+
+.comTitle {
+  font-size: 20px; /* 20px */
+  line-height: 28px; /* 28px */
+  margin-bottom: 32px;
+  font-weight: 700;
+  padding-bottom: 16px;
+  border-bottom: 1px solid rgb(0 0 0 / 0.1);
+}
+
+.textArea {
+  padding: 16px;
+  outline: none;
+  border: none;
+  width: 96%;
+  border-radius: 8px;
+  background-color: rgba(245, 245, 245, 0.5);
+  color: rgb(0, 0, 0, 0.5);
+  resize: none;
+  margin-bottom: 15px;
+}
+
+.textArea:focus {
+  box-shadow: 11px -5px 17px -1px rgba(128, 128, 128, 0.27);
+}
+
+.comBtn .btn {
+  transition: all 0.3s ease;
+  display: inline-block;
+  background-color: #e28056;
+  font-size: 14px;
+  border-radius: 20px;
+  color: #fff;
+  padding: 10px 15px;
+  cursor: pointer;
+  border: none;
+}
+
+.comBtn .btn:hover {
+  background-color: #19191a;
+  color: #fff;
+}

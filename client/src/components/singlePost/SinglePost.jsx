@@ -3,6 +3,8 @@ import { useContext, useEffect, useState } from "react";
 import { useLocation } from "react-router";
 import { Link } from "react-router-dom";
 import { Context } from "../../context/Contex";
+import Comments from "../Comments/Comments";
+import CommentsForm from "../CommentsForm/CommentsForm";
 import "./SinglePost.css";
 
 export default function SinglePost() {
@@ -79,9 +81,7 @@ export default function SinglePost() {
         <div className="singlePostInfo">
           <span className="singlePostAuthor">
             Author:
-            <Link to={`/?user=${post.username}`} className="link">
-              <b> {post.username}</b>
-            </Link>
+            <b> {post.username}</b>
           </span>
           <span className="singlePostView">Views: {post.views}</span>
           <span className="singlePostDate">
@@ -103,6 +103,8 @@ export default function SinglePost() {
           </button>
         )}
       </div>
+      <CommentsForm />
+      <Comments />
     </div>
   );
 }

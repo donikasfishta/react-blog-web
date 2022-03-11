@@ -1,0 +1,50 @@
+.comPart {
+  width: 65%;
+  margin: 45px auto;
+
+  background-color: #fff;
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+  border-radius: 8px;
+  padding: 32px 32px 48px 32px;
+  margin-bottom: 32px;
+  color: rgb(75 85 99);
+}
+
+.comTitle {
+  font-size: 20px; /* 20px */
+  line-height: 28px; /* 28px */
+  margin-bottom: 32px;
+  font-weight: 700;
+  padding-bottom: 16px;
+  border-bottom: 1px solid rgb(0 0 0 / 0.1);
+}
+
+.comArea {
+  border: none;
+  border-color: #cbd5e0;
+  margin-bottom: 16px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid rgb(0 0 0 / 0.1);
+}
+
+.comText {
+  margin-bottom: 16px;
+  display: flex;
+  justify-content: space-between;
+}
+.comText .p {
+  font-weight: 700;
+  margin-bottom: 10px;
+  font-size: 20px;
+  color: rgb(75 85 99);
+}
+.comText .date {
+  font-size: 15px;
+  color: rgb(75 85 99);
+}
+
+.comText-full {
+  white-space: pre-line;
+  color: rgb(75 85 99);
+  width: 95%;
+}

@@ -2,7 +2,7 @@
   display: flex;
 }
 
-.btn {
+.btnHome {
   position: relative;
   display: flex;
   align-items: center;
@@ -16,7 +16,7 @@
   width: 14px;
 }
 
-.btn .input {
+.btnHome .input {
   margin-left: 15px;
   border: 1px solid grey;
   border-radius: 5px;

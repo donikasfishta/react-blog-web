@@ -7,6 +7,7 @@ import "./Home.css";
 
 export default function Home() {
   const [posts, setPosts] = useState([]);
+
   const [search, setSearch] = useState("");
 
   useEffect(() => {
@@ -22,7 +23,7 @@ export default function Home() {
       <Header />
       {/* <button className="btn"> */}
       {/* <form> */}
-      <div className="btn">
+      <div className="btnHome">
         <i className="navSearchIcon fas fa-search"></i>
 
         <input
@@ -36,6 +37,7 @@ export default function Home() {
       {/* </button> */}
       <div className="home">
         <Posts posts={posts} />
+
         <Sidebar />
       </div>
     </>
