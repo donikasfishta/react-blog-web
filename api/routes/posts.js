@@ -18,6 +18,15 @@ router.post("/", async (req, res) => {
     res.status(500).json(err);
   }
 });
+//Sidebar - get most popular posts
+router.get("/sidebar/", async (req, res) => {
+  try {
+    const posts = await Post.find({}, null, { sort: { views: -1 }, limit: 4 });
+    res.status(200).json({ posts });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
 
 // Update post
 
@@ -103,17 +112,6 @@ router.post("/comment/:id", async (req, res) => {
     res.status(500).json(err);
   }
 });
-
-// Getting all Comments
-// router.get("/comment/:id", async (req, res) => {
-//   try {
-//     const post = await Post.findById(req.params.id);
-
-//     res.status(200).json(post);
-//   } catch (err) {
-//     res.status(500).json(err);
-//   }
-// });
 
 //Get ALL Posts, this will help to fetch all te data to client
 router.get("/", async (req, res) => {

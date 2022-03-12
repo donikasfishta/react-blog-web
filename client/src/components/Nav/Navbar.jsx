@@ -27,14 +27,14 @@ export default function Navbar() {
             </Link>
           </li>
           <li className="navListItem">
-            <Link className="link" to="/">
+            {/* <Link className="link" to="/">
               ABOUT
-            </Link>
+            </Link> */}
           </li>
           <li className="navListItem">
-            <Link className="link" to="/">
+            {/* <Link className="link" to="/">
               CONTACT
-            </Link>
+            </Link> */}
           </li>
           <li className="navListItem">
             <Link className="link" to="/write">

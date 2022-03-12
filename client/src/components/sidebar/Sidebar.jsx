@@ -1,6 +1,3 @@
-import axios from "axios";
-import { useEffect, useState } from "react";
-import { Link, useLocation } from "react-router-dom";
 import SidePost from "../SidePost/SidePost";
 import "./Sidebar.css";
 
@@ -17,11 +14,7 @@ export default function Sidebar({ sides }) {
 
   return (
     <div className="sidebar">
-      {/* <SidePost post={posts} /> */}
-
-      {/* {[...sides].reverse().map((p) => (
-        <SidePost side={p} />
-      ))} */}
+      <SidePost />
 
       <div className="sidebarItem">
         <span className="sidebarTitle">FOLLOW US</span>

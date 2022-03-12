@@ -12,6 +12,7 @@ const commentSchema = new mongoose.Schema(
       required: true,
     },
   },
+  { timestamps: true },
   { _id: false }
 );
 

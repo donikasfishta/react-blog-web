@@ -103,6 +103,7 @@ export default function SinglePost() {
           </button>
         )}
       </div>
+
       <CommentsForm />
       <Comments />
     </div>

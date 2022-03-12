@@ -1,0 +1,36 @@
+.side-pop {
+  font-size: 35px;
+  margin: 15px 15px;
+  color: gray;
+  border-bottom: 1px solid rgb(0 0 0 / 0.1);
+}
+
+.side-post {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid rgb(0 0 0 / 0.1);
+  margin: 25px 0;
+}
+
+.side-photo {
+  width: 200px;
+}
+
+.side-photo img {
+  width: 200px;
+  height: 115px;
+}
+
+.side-text {
+  margin-left: 10px;
+}
+
+.side-title {
+  margin-bottom: 25px;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.side-date {
+  font-size: 15px;
+}

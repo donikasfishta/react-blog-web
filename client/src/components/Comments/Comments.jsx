@@ -24,11 +24,10 @@ export default function Comments() {
         <div className="comArea ">
           <p className="comText">
             <span className="p">{p.userComment}</span>
+            <span className="date">{new Date(p.createdAt).toDateString()}</span>
           </p>
-          <p className="comText-full ">
-            {p.textComment}
-            {}
-          </p>
+
+          <p className="comText-full ">{p.textComment}</p>
         </div>
       ))}
     </div>
