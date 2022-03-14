@@ -1,6 +1,10 @@
+WEB BLOG APP
+-----------------------------
+
 In this repository you can find a BLOG App that is build in MERN Stack.
 
 LINK Of web app Deployed:
+https://blog-app-ubt.herokuapp.com/
 
 Blog APP
 This repository contains two projects:
@@ -8,9 +12,10 @@ This repository contains two projects:
 Client - Contains a React project that is the user-facing part. It has these features:
 View all blogs
 View a specific blog ( with visitor count, comments, and ability to add comments)
-Search blogs by tag
+Search blogs by tag, title and descritpion
 Show most popular article in sidebar.
 Ability to add a new post.
+Abiliti to create a user
 
 api - is the REST API part of the project, and is written in JS as well, using NodeJS.
 It uses expressjs to create REST API.
