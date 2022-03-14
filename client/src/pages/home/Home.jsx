@@ -1,5 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
+import Footer from "../../Components/Footer/Footer";
 import Header from "../../Components/Header/Header";
 import Posts from "../../Components/Posts/Posts";
 import Sidebar from "../../Components/Sidebar/Sidebar";
@@ -17,12 +18,11 @@ export default function Home() {
     };
     fetchPosts();
   }, [search]);
-  // console.log(posts);
+  console.log(posts);
   return (
     <>
       <Header />
-      {/* <button className="btn"> */}
-      {/* <form> */}
+
       <div className="btnHome">
         <i className="navSearchIcon fas fa-search"></i>
 
@@ -33,13 +33,13 @@ export default function Home() {
           onChange={(e) => setSearch(e.target.value)}
         />
       </div>
-      {/* </form> */}
-      {/* </button> */}
+
       <div className="home">
         <Posts posts={posts} />
 
         <Sidebar />
       </div>
+      <Footer />
     </>
   );
 }

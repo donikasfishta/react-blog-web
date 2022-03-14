@@ -1,17 +1,10 @@
+import axios from "axios";
+import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import SidePost from "../SidePost/SidePost";
 import "./Sidebar.css";
 
-export default function Sidebar({ sides }) {
-  // const [post, setPost] = useState([]);
-
-  // useEffect(() => {
-  //   const getCats = async () => {
-  //     const res = await axios.get(`/post/`);
-  //     setPost(res.data);
-  //   };
-  //   getCats();
-  // }, []);
-
+export default function Sidebar() {
   return (
     <div className="sidebar">
       <SidePost />

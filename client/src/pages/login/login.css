@@ -8,8 +8,9 @@
       rgba(255, 255, 255, 0.5),
       rgba(255, 255, 255, 0.5)
     ),
-    url(https://www.pbs.org/wnet/nature/files/2019/07/Super-Hummingbirds-2-1280x675.jpg);
+    url(https://images.pexels.com/photos/1036857/pexels-photo-1036857.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
   background-size: cover;
+  background-position: center;
 }
 
 .loginTitle {
@@ -41,15 +42,13 @@
   padding: 10px;
 }
 
-.loginButton:disabled{
+.loginButton:disabled {
   cursor: not-allowed;
   background-color: coral;
 }
 
 .loginRegisterButton {
-  position: absolute;
-  top: 60px;
-  right: 20px;
+  margin-top: 20px;
   background-color: teal;
   cursor: pointer;
   border: none;

@@ -10,10 +10,6 @@ export default function SidePost() {
     const fetchSidebar = async () => {
       const res = await axios.get("/posts/sidebar/");
       setPosts(res.data.posts);
-      // console.log(res.data);
-      // console.log(res.data.posts);
-      // console.log(res.data.posts.title);
-      console.log(res.data.posts);
     };
     fetchSidebar();
   }, []);

@@ -12,30 +12,21 @@ export default function Navbar() {
 
   return (
     <div className="top">
-      <div className="navLeft">
+      {/* <div className="navLeft">
         <i className="navIcon fab fa-facebook-square"></i>
         <i className="navIcon fab fa-twitter-square"></i>
         <i className="navIcon fab fa-pinterest-square"></i>
         <i className="navIcon fab fa-instagram-square"></i>
-      </div>
+      </div> */}
 
-      <div className="navCenter">
+      <div className="nav">
         <ul className="navList">
           <li className="navListItem">
             <Link className="link" to="/">
               HOME
             </Link>
           </li>
-          <li className="navListItem">
-            {/* <Link className="link" to="/">
-              ABOUT
-            </Link> */}
-          </li>
-          <li className="navListItem">
-            {/* <Link className="link" to="/">
-              CONTACT
-            </Link> */}
-          </li>
+
           <li className="navListItem">
             <Link className="link" to="/write">
               WRITE
@@ -45,8 +36,6 @@ export default function Navbar() {
             {user && "LOGOUT"}
           </li>
         </ul>
-      </div>
-      <div className="navRight">
         {user ? (
           <Link to="/settings">
             <img className="navImg" src={PF + user.profilePic} alt="" />

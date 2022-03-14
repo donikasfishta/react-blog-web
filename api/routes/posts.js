@@ -19,10 +19,25 @@ router.post("/", async (req, res) => {
   }
 });
 //Sidebar - get most popular posts
-router.get("/sidebar/", async (req, res) => {
+router.get("/sidebar", async (req, res) => {
   try {
     const posts = await Post.find({}, null, { sort: { views: -1 }, limit: 4 });
     res.status(200).json({ posts });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
+router.get("/categories", async (req, res) => {
+  const q = req.query.q;
+  const category = q.charAt(0).toUpperCase() + q.slice(1); // capitalize the first letter of category
+
+  try {
+    const categoryPosts = await Post.find({ categories: category });
+    if (!categoryPosts) {
+      console.log("There is no products with that category.");
+    }
+    res.status(200).json(categoryPosts);
   } catch (err) {
     res.status(500).json(err);
   }
@@ -127,6 +142,7 @@ router.get("/", async (req, res) => {
           { username: new RegExp(searchKey, "i") },
           { title: new RegExp(searchKey, "i") },
           { desc: new RegExp(searchKey, "i") },
+          { categories: new RegExp(searchKey, "i") },
         ],
       });
     } else {

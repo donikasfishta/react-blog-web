@@ -1,0 +1,15 @@
+.Footer {
+  margin: 0 auto;
+  border-top: 1px solid rgba(0, 0, 0, 0.062);
+  width: 96%;
+}
+
+.text {
+  display: flex;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: normal;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  color: rgba(0, 0, 0, 0.486);
+}

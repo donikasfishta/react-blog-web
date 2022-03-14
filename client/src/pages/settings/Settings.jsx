@@ -1,8 +1,9 @@
 import "./Settings.css";
 import Sidebar from "../../Components/Sidebar/Sidebar";
 import { useContext, useState } from "react";
-import { Context } from '../../context/Contex'
+import { Context } from "../../context/Contex";
 import axios from "axios";
+import Footer from "../../Components/Footer/Footer";
 
 export default function Settings() {
   const [file, setFile] = useState(null);
@@ -46,7 +47,6 @@ export default function Settings() {
       <div className="settingsWrapper">
         <div className="settingsTitle">
           <span className="settingsUpdateTitle">Update Your Account</span>
-          <span className="settingsDeleteTitle">Delete Account</span>
         </div>
         <form className="settingsForm" onSubmit={handleSubmit}>
           <label>Profile Picture</label>

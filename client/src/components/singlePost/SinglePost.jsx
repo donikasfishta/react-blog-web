@@ -6,7 +6,7 @@ import { Context } from "../../context/Contex";
 import Comments from "../Comments/Comments";
 import CommentsForm from "../CommentsForm/CommentsForm";
 import "./SinglePost.css";
-
+import Category from "../../Components/Category/Category";
 export default function SinglePost() {
   const location = useLocation();
   const path = location.pathname.split("/")[2];
@@ -16,13 +16,16 @@ export default function SinglePost() {
   const [title, setTitle] = useState("");
   const [desc, setDesc] = useState("");
   const [updateMode, setUpdateMode] = useState(false);
-
+  const [categories, setCategories] = useState("Choose One Category");
+  const [comments, setComments] = useState([]);
   useEffect(() => {
     const getPost = async () => {
       const res = await axios.get("/posts/" + path);
       setPost(res.data);
       setTitle(res.data.title);
       setDesc(res.data.desc);
+      setCategories(res.data.categories);
+      setComments(res.data.comments);
     };
     getPost();
   }, [path]);
@@ -84,6 +87,7 @@ export default function SinglePost() {
             <b> {post.username}</b>
           </span>
           <span className="singlePostView">Views: {post.views}</span>
+          <span className="singlePostView">Category: {post.categories}</span>
           <span className="singlePostDate">
             {new Date(post.createdAt).toDateString()}
           </span>
@@ -105,7 +109,7 @@ export default function SinglePost() {
       </div>
 
       <CommentsForm />
-      <Comments />
+      <Comments comments={comments} />
     </div>
   );
 }

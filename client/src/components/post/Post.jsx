@@ -13,9 +13,10 @@ export default function Post({ post }) {
           )}
           <div className="postInfo">
             <div className="postCats">
-              {post.categories.map((c) => (
-                <span className="postCat">{c.name}</span>
-              ))}
+              {/* {post.categories.map((c) => (
+                <span className="postCat">{c}</span>
+              ))} */}
+              {post.categories}
             </div>
 
             <span className="postTitle">{post.title}</span>

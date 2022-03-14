@@ -8,8 +8,9 @@
       rgba(255, 255, 255, 0.5),
       rgba(255, 255, 255, 0.5)
     ),
-    url(https://www.ambius.com/blog/wp-content/uploads/2018/06/top-10-desk-plants-blog.jpg);
+    url(https://images.pexels.com/photos/8871853/pexels-photo-8871853.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=500&w=900);
   background-size: cover;
+  background-position: center;
 }
 
 .registerTitle {
@@ -42,9 +43,7 @@
 }
 
 .registerLoginButton {
-  position: absolute;
-  top: 60px;
-  right: 20px;
+  margin-top: 20px;
   background-color: lightcoral;
   cursor: pointer;
   border: none;
@@ -53,7 +52,6 @@
   border-radius: 10px;
 }
 
-.error-span{
+.error-span {
   background-color: red;
-  
 }
