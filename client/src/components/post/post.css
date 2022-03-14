@@ -35,6 +35,11 @@
   margin-top: 15px;
   margin-right: 10px;
   cursor: pointer;
+  background-color: #dc7633;
+  border: none;
+  color: #fff;
+  border-radius: 10px;
+  padding: 10px;
 }
 
 .postTitle {
